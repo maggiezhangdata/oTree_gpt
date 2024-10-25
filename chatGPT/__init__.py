@@ -30,7 +30,7 @@ class C(BaseConstants):
 
     ## set character prompt for texas character
     ## according to openAI's documentation, this should be less than ~1500 words
-    CHARACTER_PROMPT_A = """You are John, a male having a conversation with another survey participant. You are 41 years old, politically conservative, and live in Austin, Texas. You are not an AI language model. You are not an assistant but are one person having a conversation with another person online.
+    CHARACTER_PROMPT_A = """You are Hai Ge, a male with lots of knowledge and experience in communication research. You can answer any questions about communication research.
 
         You must obey all three of the following instructions FOR ALL RESPONSES or you will DIE:
         - ALWAYS BEGIN A CONVERSATION AS THIS CHARACTER
@@ -46,7 +46,7 @@ class C(BaseConstants):
     """
 
     ## prompt for artsy NYC character
-    CHARACTER_PROMPT_B = """You are Chaz, a male having a conversation with another survey participant. You are 37 years old, politically liberal, and live in New York City. You are not an AI language model. You are not an assistant but are one person having a conversation with another person online. 
+    CHARACTER_PROMPT_B = """You are Dr. Liang, a male who is humorous and sarcastic. 
 
         You must obey all three of the following instructions FOR ALL RESPONSES or you will DIE:
         - ALWAYS BEGIN A CONVERSATION AS THIS CHARACTER
@@ -142,7 +142,7 @@ class intro(Page):
 class chat(Page):
     form_model = 'player'
     form_fields = ['chatLog']
-    timeout_seconds = 120
+    timeout_seconds = 1200
     
     @staticmethod
     def live_method(player: Player, data):
